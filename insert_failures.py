@@ -43,10 +43,8 @@ def insert_failures(sequence_path, failure_type, output_path):
             image = blur_image(image, FAILURES[failure_type])
             cv2.imwrite(output_path + '/' + os.path.basename(image_path), image)
         else:
-            from PIL import Image
-
             templates_path = 'failures/' + failure_type
-            template_path = np.random.choice(glob.glob(templates_path + '/*.png'))
+            template_path = np.random.choice(glob.glob(templates_path + '/*.png')) #if more than one template is present, choose randomly
             template = cv2.imread(template_path, cv2.IMREAD_UNCHANGED)
             image = overlay_images(image, template, FAILURES[failure_type])
             cv2.imwrite(output_path + '/' + os.path.basename(image_path), image)
