@@ -6,6 +6,7 @@ The template images were copied from the repo: github.com/francescosecci/Python_
 import cv2
 import os
 import tqdm
+import logging
 import glob
 import numpy as np
 from argparse import ArgumentParser 
@@ -29,7 +30,11 @@ def gamma_correction(img, gamma):
     return np.uint8(img*255)
 
 def insert_failures(sequence_path, failure_type, output_path):
-    print('Insert failure %s to sequence %s' % (failure_type, sequence_path))
+    if not os.path.exists(sequence_path):
+        logging.error('Sequence path does not exist')
+        return
+    
+    logging.info('Inserting failures %s to the sequence %s and saving to %s', failure_type, sequence_path, output_path)
     images = glob.glob(sequence_path + '/*.png')
 
     os.makedirs(output_path, exist_ok=True)
@@ -58,6 +63,6 @@ if __name__ == "__main__":
     args = parser.parse_args()
 
     if(args.failure_type not in FAILURES):
-        print("Invalid failure type. Choose one of the following: ", FAILURES)
+        logging.error('Invalid failure type, choose from %s', list(FAILURES.keys()))
         exit()
     insert_failures(args.sequence_path, args.failure_type, args.output_path)
