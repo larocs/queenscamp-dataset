@@ -11,9 +11,12 @@ import glob
 import numpy as np
 from argparse import ArgumentParser 
 
-FAILURES = {'underexposure': 2, 'overexposure': 0.5, 'blur': 5, 'breakage': 1.0,  'rain': 1.0, 'condensation': 1.0, 'dirt': 0.65} 
+FAILURES = {'underexposure': 2, 'overexposure': 0.5, 'blur': 35, 'breakage': 1.0,  'rain': 0.75, 'condensation': 1.0, 'dirt': 0.65} 
 
 def overlay_images(image, template, alpha=0.5):
+    '''
+        Overlays the template image on the original image with the given alpha value
+    '''
     image = cv2.cvtColor(image, cv2.COLOR_BGR2BGRA)
     template = cv2.resize(template, (image.shape[1], image.shape[0]))
     template_rgb = template[:, :, :3]
@@ -23,13 +26,22 @@ def overlay_images(image, template, alpha=0.5):
     return image
 
 def blur_image(image, kernel_size):
+    '''
+        Blurs the image using Gaussian blur
+    '''
     return cv2.GaussianBlur(image, (kernel_size, kernel_size), 0)
 
 def gamma_correction(img, gamma):
+    '''
+        Under and over exposure can be simulated by gamma correction
+    '''
     img = (img/255.)**(gamma) #apply gamma
     return np.uint8(img*255)
 
 def insert_failures(sequence_path, failure_type, output_path):
+    '''
+        Inserts the failure to the given sequence of images and saves it to the output path
+    '''
     if not os.path.exists(sequence_path):
         logging.error('Sequence path does not exist')
         return
