@@ -34,7 +34,7 @@ def convert_bag_to_files(args):
         poses = []
     
         writer = csv.writer(open(args.trajectory_file, 'w'), delimiter=' ')
-	
+
         for topic, msg, t in bag.read_messages(topics=[args.pose_topic]):
             tstamp = msg.header.stamp.secs+msg.header.stamp.nsecs*1e-9
             poses.append(msg.pose)
@@ -50,10 +50,12 @@ def convert_bag_to_files(args):
         transformation = np.linalg.inv(first_pose) @ target_pose
         print('transformation: ', transformation)
 
+    tstamps_file = open(os.path.join(args.timestamps_file), 'w+')
+
     for topic, msg, t in bag.read_messages(topics=[args.image_topic]):
         if(skip > 0):
-            skip -= 1
-            continue
+           skip -= 1
+           continue
         #find approximate match between image timestamp and pose timestamp
         tstamp = msg.header.stamp.secs+msg.header.stamp.nsecs*1e-9
         
@@ -67,8 +69,9 @@ def convert_bag_to_files(args):
             translation = transformed_pose[:3, 3]
             rotation = R.from_matrix(transformed_pose[:3, :3]).as_quat()
             #write to csv file
-            writer.writerow([timestamps[idx], translation[0], translation[1], translation[2], rotation[0], rotation[1], rotation[2], rotation[3]])
-
+            writer.writerow([tstamp, translation[0], translation[1], translation[2], rotation[0], rotation[1], rotation[2], rotation[3]])
+            tstamps_file.write(str(tstamp)+'\n')
+    
         #write image
         img = bridge.compressed_imgmsg_to_cv2(msg, desired_encoding="passthrough")
         print("Writing image: {}.png. {}/{}".format(tstamp, imgs_count, args.max_imgs))
@@ -79,7 +82,7 @@ def convert_bag_to_files(args):
         imgs_count += 1
         if imgs_count >= args.max_imgs:
             break
-
+    tstamps_file.close()
     bag.close()
     print("Done.")
 
@@ -89,6 +92,7 @@ if __name__ == "__main__":
     args.add_argument("bag_file", help="Input bag file")
     args.add_argument("--trajectory_file", help="Output trajectory file", default=None)
     args.add_argument("--image_folder", help="Image folder", default='images')
+    args.add_argument("--timestamps_file", help="Output trajectory file", default=None)
     args.add_argument("--image_topic", help="Image topic", default='rgb/image_raw/compressed')
     args.add_argument("--pose_topic", help="Pose topic", default=None)
     args.add_argument("--max_imgs", help="Maximum number of images to convert", default=800, type=int)
