@@ -32,22 +32,26 @@ def convert_bag_to_files(args):
         for topic, msg, t in bag.read_messages(topics=[args.depth_topic.replace('image_rect_raw', 'camera_info')]):
             depth_camera_info = msg
             K_depth = camera_info_to_matrix(depth_camera_info)
-            if(K_depth is not None):
+            if(depth_camera_info is not None):
                 break
-    
+
     color_camera_info = None
     for topic, msg, t in bag.read_messages(topics=[args.image_topic.replace('image_raw/compressed', 'camera_info')]):
         color_camera_info = msg
         K_color = camera_info_to_matrix(color_camera_info)
-        if(K_color is not None):
+        if(color_camera_info is not None):
             break
 
-    tf_static = None
-    for topic, msg, t in bag.read_messages(topics=['/tf_static']):
-        tf_static = msg
-        Rt = tf_static_to_Rt(tf_static, "tarot2_color_frame", "tarot2_depth_frame")
-        if Rt is not None:
-            break
+    # tf_static = None
+    # for topic, msg, t in bag.read_messages(topics=['/tf_static']):
+    #     tf_static = msg
+    #     Rt = tf_static_to_Rt(tf_static, "tarot2_color_frame", "tarot2_depth_frame")
+    #     if tf_static is not None:
+    #         break
+    Rt = np.array([[ 9.99988967e-01, -4.67267074e-03,  4.82635011e-04, -2.43997682e-04],
+    [ 4.67321253e-03,  9.99988445e-01, -1.12761115e-03,  1.47124780e-02],
+    [-4.77360479e-04,  1.12985417e-03,  9.99999248e-01,  2.54053506e-04],
+    [ 0.00000000e+00,  0.00000000e+00,  0.00000000e+00,  1.00000000e+00]])
 
     timestamps = []
     imgs_count = 0
@@ -56,7 +60,7 @@ def convert_bag_to_files(args):
         fourcc = cv2.VideoWriter_fourcc(*'XVID')
         out = cv2.VideoWriter(os.path.join(args.image_folder, args.video_file), fourcc, args.video_fps, (1920, 1080))
 
-    if(args.pose_topic != None):
+    if(args.pose_topic is not None):
         poses = []
     
         writer = csv.writer(open(args.trajectory_file, 'w'), delimiter=' ')
@@ -76,7 +80,7 @@ def convert_bag_to_files(args):
         transformation = np.linalg.inv(first_pose) @ target_pose
         print('transformation: ', transformation)
 
-    tstamps_file = open(os.path.join(args.timestamps_file), 'w+')
+    tstamps_file = open(os.path.join(args.timestamps_file), 'w')
     depth_msgs = []
     depth_timestamps = []
     if(args.depth_topic is not None):
@@ -110,14 +114,15 @@ def convert_bag_to_files(args):
             tstamps_file.write(str(tstamp) + '\n')
 
             # Find the closest depth timestamp
-            depth_idx = min(range(len(depth_timestamps)), key=lambda i: abs(depth_timestamps[i] - tstamp))
-            depth_msg = depth_msgs[depth_idx]
-            depth_img = depth_to_image(depth_msg)
+            if(args.depth_topic is not None):
+                depth_idx = min(range(len(depth_timestamps)), key=lambda i: abs(depth_timestamps[i] - tstamp))
+                depth_msg = depth_msgs[depth_idx]
+                depth_img = depth_to_image(depth_msg)
 
             #get image
             img = bridge.compressed_imgmsg_to_cv2(msg, desired_encoding="passthrough")     
             
-            if(args.depth_topic != None):
+            if(args.depth_topic is not None):
                 img, depth_img = align_images(img, depth_img, K_depth, K_color, Rt[:3, :3], Rt[:3, 3])
             
             if(args.visualize):
@@ -126,7 +131,7 @@ def convert_bag_to_files(args):
             #write image
             print("Writing image: {}.png. {}/{}".format(tstamp, imgs_count, args.max_imgs))
             #write depth
-            if(args.depth_topic != None):
+            if(args.depth_topic is not None):
                 cv2.imwrite(os.path.join(args.depth_folder, "{}.png".format(tstamp)), depth_img)
             if(args.save_as_video):
                 out.write(img)
@@ -147,8 +152,8 @@ if __name__ == "__main__":
     args.add_argument("--image_folder", help="Image folder", default='images')
     args.add_argument("--depth_folder", help="Depth folder", default='depths')
     args.add_argument("--timestamps_file", help="Output trajectory file", default=None)
-    args.add_argument("--image_topic", help="Image topic", default='rgb/image_raw/compressed')
-    args.add_argument("--depth_topic", help="Depth topic", default='depth/image_raw')
+    args.add_argument("--image_topic", help="Image topic", default=None)
+    args.add_argument("--depth_topic", help="Depth topic", default=None)
     args.add_argument("--pose_topic", help="Pose topic", default=None)
     args.add_argument("--max_imgs", help="Maximum number of images to convert", default=800, type=int)
     args.add_argument("--skip", help="N first images to skip", default=0, type=int)
