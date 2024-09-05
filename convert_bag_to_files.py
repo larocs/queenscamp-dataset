@@ -117,11 +117,12 @@ def convert_bag_to_files(args):
             if(args.depth_topic is not None):
                 depth_idx = min(range(len(depth_timestamps)), key=lambda i: abs(depth_timestamps[i] - tstamp))
                 depth_msg = depth_msgs[depth_idx]
-                depth_img = depth_to_image(depth_msg)
+                depth_img = bridge.imgmsg_to_cv2(depth_msg, desired_encoding='passthrough')
+                #depth_img = depth_to_image(depth_msg)
 
             #get image
-            img = bridge.compressed_imgmsg_to_cv2(msg, desired_encoding="passthrough")     
-            
+            img = bridge.compressed_imgmsg_to_cv2(msg, desired_encoding="passthrough")
+
             if(args.depth_topic is not None):
                 img, depth_img = align_images(img, depth_img, K_depth, K_color, Rt[:3, :3], Rt[:3, 3])
             

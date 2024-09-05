@@ -9,7 +9,7 @@ def get_metrics(ref_file, est_file):
    
     max_diff = 0.01
     traj_ref, traj_est = sync.associate_trajectories(traj_ref, traj_est, max_diff)
-    traj_est.align(traj_ref, correct_scale=False, correct_only_scale=False)
+    traj_est.align(traj_ref, correct_scale=True, correct_only_scale=False)
     data = (traj_ref, traj_est)
 
     #APE
@@ -17,7 +17,7 @@ def get_metrics(ref_file, est_file):
     ate_metric = metrics.APE(pose_relation)
     ate_metric.process_data(data)
     ate_stat = ate_metric.get_statistic(metrics.StatisticsType.rmse)
-    print('ATE: ', round(ate_stat, 4))
+    print('ATE: ', round(ate_stat, 2))
     return ate_stat
 
 
