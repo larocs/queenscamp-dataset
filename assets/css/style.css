@@ -1,0 +1,16 @@
+/* Custom styles for image grid */
+.img-grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .img-grid img {
+    margin: 10px;
+    width: 200px;
+    height: auto;
+  }
+  .caption {
+    text-align: center;
+    font-size: 14px;
+    color: gray;
+  }

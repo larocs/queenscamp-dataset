@@ -1,2 +1,24 @@
+# Site settings
+title: "QueensCAMP Dataset"
+description: "An RGB-D dataset for robust Visual SLAM"
+
+theme: jekyll-theme-cayman 
+
+# Custom CSS
+sass:
+  style: compressed # Compresses the CSS
+  load_paths:
+    - assets/css # The folder where you store your custom stylesheets
+
+
+# Include custom CSS
+include:
+  - "assets/css/style.css"
+
+# Plugins (optional, based on the Jekyll plugins you need)
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
 name: QueensCAMP Dataset
 theme: jekyll-theme-slate
