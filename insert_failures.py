@@ -11,7 +11,7 @@ import glob
 import numpy as np
 from argparse import ArgumentParser 
 
-FAILURES = {'underexposure': 2, 'overexposure': 0.5, 'blur': 35, 'breakage': 1.0,  'rain': 0.75, 'condensation': 1.0, 'dirt': 0.65} 
+FAILURES = {'underexposure': 2, 'overexposure': 0.5, 'blur': 35, 'breakage': 1.0,  'wet': 0.75, 'condensation': 1.0, 'dirt': 0.65} 
 
 def overlay_images(image, template, alpha=0.5):
     '''
