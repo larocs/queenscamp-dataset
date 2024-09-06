@@ -2,7 +2,7 @@
 title: "QueensCAMP Dataset"
 description: "An RGB-D dataset for robust Visual SLAM"
 
-theme: jekyll-theme-cayman 
+theme: jekyll-theme-slate 
 
 # Custom CSS
 sass:
@@ -14,11 +14,6 @@ sass:
 # Include custom CSS
 include:
   - "assets/css/style.css"
-
-# Plugins (optional, based on the Jekyll plugins you need)
-plugins:
-  - jekyll-feed
-  - jekyll-seo-tag
 
 name: QueensCAMP Dataset
 theme: jekyll-theme-slate

@@ -3,6 +3,22 @@
 This repository contains tools for the QueensCAMP dataset. The dataset is a collection of RGB-D images of an indoor environment designed to evaluate VSLAM systems' robustness in real-world indoor environments with diverse challenges.
 Below are sample images illustrating various lens failures included in the dataset that can be emulated with the provided tools:
 
+<div class="img-grid">
+  <div>
+    <img src="./assets/sample-image.png" alt="Sample Image"/>
+    <div class="caption">Sample Image</div>
+  </div>
+  <div>
+    <img src="./assets/sample-underexposure.png" alt="Underexposure"/>
+    <div class="caption">Underexposure</div>
+  </div>
+  <div>
+    <img src="./assets/sample-overexposure.png" alt="Overexposure"/>
+    <div class="caption">Overexposure</div>
+  </div>
+</div>
+
+
 ## Scripts Usage
 
 ### 1. Download the dataset
