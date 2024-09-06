@@ -4,16 +4,5 @@ description: "An RGB-D dataset for robust Visual SLAM"
 
 theme: jekyll-theme-slate 
 
-# Custom CSS
-sass:
-  style: compressed # Compresses the CSS
-  load_paths:
-    - assets/css # The folder where you store your custom stylesheets
-
-
-# Include custom CSS
-include:
-  - "assets/css/style.css"
-
 name: QueensCAMP Dataset
 theme: jekyll-theme-slate
