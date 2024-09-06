@@ -5,41 +5,41 @@ Below are sample images illustrating various lens failures included in the datas
 
 <div align=center>
     <table>
-    <tr>
-        <td></td>
-        <td align="center">
-        <img src="./assets/sample-image.png" width="200" /><br>
-        <sub>Sample Image</sub>
-        </td>
-        <td></td>
-    </tr>
-    <tr>
-        <td align="center">
-        <img src="./assets/sample-underexposure.png" width="200" /><br>
-        <sub>Underexposure</sub>
-        </td>
-        <td align="center">
-        <img src="./assets/sample-overexposure.png" width="200" /><br>
-        <sub>Overexposure</sub>
-        </td>
-        <td align="center">
-        <img src="./assets/sample-breakage.png" width="200" /><br>
-        <sub>Lens Breakage</sub>
-        </td>
-    <tr>
-        <td align="center">
-        <img src="./assets/sample-wet.png" width="200" /><br>
-        <sub>Wet Lens</sub>
-        </td>
-        <td align="center">
-        <img src="./assets/sample-condensation.png" width="200" /><br>
-        <sub>Condensation</sub>
-        </td>
-        <td align="center">
-        <img src="./assets/sample-dirt.png" width="200" /><br>
-        <sub>Lens Dirt</sub>
-        </td>
-    </tr>
+        <tr>
+            <td> </td>
+            <td align="center">
+                <img src="./assets/sample-image.png" width="200" /><br>
+                <sub>Sample Image</sub>
+            </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td align="center">
+                <img src="./assets/sample-underexposure.png" width="200" /><br>
+                <sub>Underexposure</sub>
+            </td>
+                <td align="center">
+                <img src="./assets/sample-overexposure.png" width="200" /><br>
+                <sub>Overexposure</sub>
+            </td>
+                <td align="center">
+                <img src="./assets/sample-breakage.png" width="200" /><br>
+                <sub>Lens Breakage</sub>
+            </td>
+        <tr>
+            <td align="center">
+                <img src="./assets/sample-wet.png" width="200" /><br>
+                <sub>Wet Lens</sub>
+            </td>
+            <td align="center">
+                <img src="./assets/sample-condensation.png" width="200" /><br>
+                <sub>Condensation</sub>
+            </td>
+            <td align="center">
+                <img src="./assets/sample-dirt.png" width="200" /><br>
+                <sub>Lens Dirt</sub>
+            </td>
+        </tr>
     </table>
 </div>
 
