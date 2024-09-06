@@ -5,8 +5,8 @@ Below are sample images illustrating various lens failures included in the datas
 
 <div class="img-grid">
   <div>
-    <img src="./assets/sample-image.png" alt="Sample Image"/>
-    <div class="caption">Sample Image</div>
+    <img src="./assets/sample-image.png" alt="Original Image"/>
+    <div class="caption">Original Image</div>
   </div>
   <div>
     <img src="./assets/sample-underexposure.png" alt="Underexposure"/>
@@ -15,6 +15,22 @@ Below are sample images illustrating various lens failures included in the datas
   <div>
     <img src="./assets/sample-overexposure.png" alt="Overexposure"/>
     <div class="caption">Overexposure</div>
+  </div>
+  <div>
+    <img src="./assets/sample-breakage.png" alt="Breakage"/>
+    <div class="caption">Breakage</div>
+  </div>
+  <div>
+    <img src="./assets/sample-condensation.png" alt="Condensation"/>
+    <div class="caption">Condensation</div>
+  </div>  
+  <div>
+    <img src="./assets/sample-wet.png" alt="Wet"/>
+    <div class="caption">Wet</div>
+  </div>
+  <div>
+    <img src="./assets/sample-dirt.png" alt="Dirt"/>
+    <div class="caption">Dirt</div>
   </div>
 </div>
 
