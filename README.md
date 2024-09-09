@@ -3,50 +3,14 @@
 This repository contains tools for the QueensCAMP dataset. The dataset is a collection of RGB-D images of an indoor environment designed to evaluate VSLAM systems' robustness in real-world indoor environments with diverse challenges.
 Below are sample images illustrating various lens failures included in the dataset that can be emulated with the provided tools:
 
-<table>
-    <tr>
-        <td></td>
-        <td align="center">
-        <img src="./assets/sample-image.png" width="200" /><br>
-        <sub>Sample Image</sub>
-        </td>
-        <td></td>
-    </tr>
-    <tr>
-        <td align="center">
-        <img src="./assets/sample-underexposure.png" width="200" /><br>
-        <sub>Underexposure</sub>
-        </td>
-        <td align="center">
-        <img src="./assets/sample-overexposure.png" width="200" /><br>
-        <sub>Overexposure</sub>
-        </td>
-        <td align="center">
-        <img src="./assets/sample-breakage.png" width="200" /><br>
-        <sub>Lens Breakage</sub>
-        </td>
-    <tr>
-        <td align="center">
-        <img src="./assets/sample-wet.png" width="200" /><br>
-        <sub>Wet Lens</sub>
-        </td>
-        <td align="center">
-        <img src="./assets/sample-condensation.png" width="200" /><br>
-        <sub>Condensation</sub>
-        </td>
-        <td align="center">
-        <img src="./assets/sample-dirt.png" width="200" /><br>
-        <sub>Lens Dirt</sub>
-        </td>
-    </tr>
-</table>
+![sample-dataset](./assets/sample-dataset.png)
 
 ## Scripts Usage
 
 ### 1. Download the dataset
 There are 16 sequences, you can download the sequences with the failures or only the raw bags (without emulated failures):
-- 01: [Full Sequence](https://drive.usercontent.google.com/download?id=1H6_Y_DupjIJNn4tnIFHsXhW0KqEeTJHm&export=download) |
-               [Bag](https://drive.usercontent.google.com/download?id=1xjIQjClK1niVoXDSxSNxQe76FkAcNAff&export=download)
+- 01: [Full Sequence (6.0 GB)](https://drive.usercontent.google.com/download?id=1H6_Y_DupjIJNn4tnIFHsXhW0KqEeTJHm&export=download) |
+               [Bag (0.5 MB)](https://drive.usercontent.google.com/download?id=1xjIQjClK1niVoXDSxSNxQe76FkAcNAff&export=download)
 
 
 ### 2. Rosbags Post-Processing
