@@ -1,10 +1,10 @@
+![sample-dataset](./assets/sample-dataset.png)
+
 The QueensCAMP dataset is a collection of RGB-D images of an indoor environment designed to evaluate VSLAM systems' robustness in real-world indoor environments with diverse challenges. The dataset contains dynamic objects, motion blur, lighting changes, and other challenges that are common in real-world indoor environments. Additionally, it includes sequences with emulated lens failures.
 
 The images are captured using an Intel RealSense D435 camera mounted on an handheld aerial vehicle. The dataset includes ground truth poses for each frame captured by a Vicon motion capture system.
 
 We captured 16 sequences, resulting in a total of 28,523 images at 15 frames per second. Additionally, for each sequence we generated 6 more sequences with induced failures, leading to a total of 112 sequences and 199,661 images with 13,861.12 seconds in total duration. The RGB and Depth images resolution are provided in a resolution of 640x480.
-
-![sample-dataset](./assets/sample-dataset.png)
 
 ## Download
 
