@@ -1,5 +1,4 @@
-<img src=./assets/sample-dataset.png width="480" height="360">
-
+![sample-dataset](./assets/sample-dataset.png)
 
 <p style="text-align: justify;">
 The QueensCAMP dataset is a collection of RGB-D images of an indoor environment designed to evaluate VSLAM systems' robustness in real-world indoor environments with diverse challenges. The dataset contains dynamic objects, motion blur, lighting changes, and other challenges that are common in real-world indoor environments. Additionally, it includes sequences with emulated lens failures.
