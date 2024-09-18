@@ -1,14 +1,21 @@
-# QueensCAMP Dataset Tools
-
-This repository contains tools for the QueensCAMP dataset. The dataset is a collection of RGB-D images of an indoor environment designed to evaluate VSLAM systems' robustness in real-world indoor environments with diverse challenges.
-Below are sample images illustrating various lens failures included in the dataset that can be emulated with the provided tools:
-
 ![sample-dataset](./assets/sample-dataset.png)
 
-## Scripts Usage
+<p style="text-align: justify;">
+The QueensCAMP dataset is a collection of RGB-D images of an indoor environment designed to evaluate VSLAM systems' robustness in real-world indoor environments with diverse challenges. The dataset contains dynamic objects, motion blur, lighting changes, and other challenges that are common in real-world indoor environments. Additionally, it includes sequences with emulated lens failures.
 
-### 1. Download the dataset
-There are 16 sequences, you can download the sequences with the failures or only the raw bags (without emulated failures):
+The images are captured using an Intel RealSense D435 camera mounted on an handheld aerial vehicle. The dataset includes ground truth poses for each frame captured by a Vicon motion capture system.
+
+We captured 16 sequences, resulting in a total of 28,523 images at 15 frames per second. Additionally, for each sequence we generated 6 more sequences with induced failures, leading to a total of 112 sequences and 199,661 images with 13,861.12 seconds in total duration. The RGB and Depth images resolution are provided in a resolution of 640x480.
+</p>
+
+
+
+## Download
+<p style="text-align: justify;">
+
+You can download the sequences with the failures or only the raw bags (without emulated failures). The raw images are not aligned with the depth images. RGB images were captured at a resolution of 1920x1080, while depth images were captured at 640x480. 
+</p>
+
 
 - 01: [Full Sequence (6.0 GB)](https://drive.usercontent.google.com/download?id=1H6_Y_DupjIJNn4tnIFHsXhW0KqEeTJHm&export=download) |
                [Bag (0.5 GB)](https://drive.usercontent.google.com/download?id=1xjIQjClK1niVoXDSxSNxQe76FkAcNAff&export=download)
@@ -58,40 +65,20 @@ There are 16 sequences, you can download the sequences with the failures or only
 - 16: [Full Sequence (4.2 GB)](https://drive.usercontent.google.com/download?id=1NgSeh7LJXVZG024mrV-l0pWlvphj4SST&export=download) |
         [Bag (0.4 GB)](https://drive.usercontent.google.com/download?id=1kUfufHLgd9Q9Z3Eb1gAdgDXD3rPxdA6P&export=download)
 
-### 2. Rosbags Post-Processing
-If you plan to download the rosbags, you can use the post-processing script to convert the rosbags to images and depth maps. The script will also generate the ground truth poses for each frame. Feel free to modify the script to suit your needs.
+## Dataset tools
 
-Usage:
+The scripts used for post-processing of the bags and inserting failures are available in the [QueensCAMP Dataset Tools](https://github.com/larocs/queenscamp-dataset) repository.
 
-```bash
-python convert_bag_to_files.py <path_to_rosbag> --timestamps <path_to_save_timestamps> --trajectory_file <path_to_save_trajectory> --image_folder <path_to_save_images> --depth_folder <path_to_save_depths> --image_topic <image_topic> --depth_topic <depth_topic> --pose_topic <odom_topic>
+
+## Citation
+
+If you use this dataset in your research, please cite the following paper:
+
 ```
-
-For the dataset we also used the parameter `--skip 100` to skip the first 100 frames to reduce the size of static images.
-
-### 3. Inserting Failures
-The script `insert_failures.py` can be used to insert failures in the dataset images. Currently, the failures available are:
-- 'underexposure'
-- 'overexposure'
-- 'blur'
-- 'breakage'
-- 'wet'
-- 'condensation'
-- 'dirt'
-
-The templates for the failures are available in the `failures` folder.
-
-Usage:
-
-```bash
-python insert_failures.py --sequence_path <path_to_sequence> --failure_type <failure_type> --output_path <path_to_save_sequence>
-```
-
-### 4. Evaluation
-The script `evaluate.py` can be used to evaluate the performance of a VO/VSLAM system on the dataset. The script will compare the estimated trajectory with the ground truth trajectory and output the ATE error. The results can either be printed on the console or saved to a file.
-
-Usage:
-
-```bash
-python evaluate.py <reference_file> <estimated_file> --output_path <path_to_save_results>
+@inproceedings{queenscamp2024,
+  title={QueensCAMP: an RGB-D dataset for robust Visual SLAM},
+  author={Authors},
+  booktitle={Conference},
+  year={2024}
+}
 ```

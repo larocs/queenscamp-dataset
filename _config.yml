@@ -1,0 +1,8 @@
+# Site settings
+title: "QueensCAMP Dataset"
+description: "An RGB-D dataset for robust Visual SLAM"
+
+theme: jekyll-theme-slate 
+
+name: QueensCAMP Dataset
+theme: jekyll-theme-slate
