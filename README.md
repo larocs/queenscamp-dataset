@@ -8,6 +8,11 @@ Below are sample images illustrating various lens failures included in the datas
 ## Scripts Usage
 
 ### 1. Download the dataset
+
+* RGB Camera info is available [here](https://drive.usercontent.google.com/uc?id=16JEOw3xNZu8f79BG29LN6BoParwQUhqU)
+
+* Depth Camera info is available [here](https://drive.usercontent.google.com/uc?id=1IqAv9xRtl1qZ4iXHHOcg_rNLyAPKUIw1)
+
 There are 16 sequences, you can download the sequences with the failures or only the raw bags (without emulated failures):
 
 - 01: [Full Sequence (6.0 GB)](https://drive.usercontent.google.com/download?id=1H6_Y_DupjIJNn4tnIFHsXhW0KqEeTJHm&export=download) |
