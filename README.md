@@ -103,7 +103,7 @@ python evaluate.py <reference_file> <estimated_file> --output_path <path_to_save
 
 ## Citation
 
-If you use this dataset in your research, please cite the following paper:
+If you use the dataset or tools in your research, please cite the following paper:
 
 ```
 @misc{bruno2024queenscamprgbddatasetrobust,
