@@ -1,4 +1,8 @@
-![sample-dataset](./assets/sample-dataset.png)
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/YoLkNhWoUXY" 
+frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+allowfullscreen></iframe>
+
 
 The QueensCAMP dataset is a collection of RGB-D images of an indoor environment designed to evaluate VSLAM systems' robustness in real-world indoor environments with diverse challenges. The dataset contains dynamic objects, motion blur, lighting changes, and other challenges that are common in real-world indoor environments. Additionally, it includes sequences with emulated lens failures.
 
@@ -74,10 +78,13 @@ The scripts used for post-processing of the bags and inserting failures are avai
 If you use this dataset in your research, please cite the following paper:
 
 ```
-@inproceedings{queenscamp2024,
-  title={QueensCAMP: an RGB-D dataset for robust Visual SLAM},
-  author={Authors},
-  booktitle={Conference},
-  year={2024}
+@misc{bruno2024queenscamprgbddatasetrobust,
+      title={QueensCAMP: an RGB-D dataset for robust Visual SLAM}, 
+      author={Hudson M. S. Bruno and Esther L. Colombini and Sidney N. Givigi Jr au2},
+      year={2024},
+      eprint={2410.12520},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2410.12520}, 
 }
 ```

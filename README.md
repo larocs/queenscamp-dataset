@@ -1,9 +1,9 @@
 # QueensCAMP Dataset Tools
 
 This repository contains tools for the QueensCAMP dataset. The dataset is a collection of RGB-D images of an indoor environment designed to evaluate VSLAM systems' robustness in real-world indoor environments with diverse challenges.
-Below are sample images illustrating various lens failures included in the dataset that can be emulated with the provided tools:
+Below there is a video illustrating various lens failures included in the dataset that can be emulated with the provided tools:
 
-![sample-dataset](./assets/sample-dataset.gif)
+[![Dataset Sample](assets/thumbnail.png)](https://www.youtube.com/watch?v=YoLkNhWoUXY)
 
 ## Scripts Usage
 
@@ -99,4 +99,20 @@ Usage:
 
 ```bash
 python evaluate.py <reference_file> <estimated_file> --output_path <path_to_save_results>
+```
+
+## Citation
+
+If you use this dataset in your research, please cite the following paper:
+
+```
+@misc{bruno2024queenscamprgbddatasetrobust,
+      title={QueensCAMP: an RGB-D dataset for robust Visual SLAM}, 
+      author={Hudson M. S. Bruno and Esther L. Colombini and Sidney N. Givigi Jr au2},
+      year={2024},
+      eprint={2410.12520},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2410.12520}, 
+}
 ```
