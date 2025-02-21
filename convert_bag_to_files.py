@@ -97,6 +97,8 @@ def convert_bag_to_files(args):
         tstamp = msg.header.stamp.secs+msg.header.stamp.nsecs*1e-9
         
         if args.pose_topic is not None:
+            file_id = "{:04d}".format(imgs_count)
+
             # Find the closest pose timestamp
             pose_idx = min(range(len(timestamps)), key=lambda i: abs(timestamps[i] - tstamp))
             pose = poses[pose_idx]
@@ -111,7 +113,7 @@ def convert_bag_to_files(args):
 
             # Write to CSV file
             writer.writerow([tstamp, translation[0], translation[1], translation[2], rotation[0], rotation[1], rotation[2], rotation[3]])
-            tstamps_file.write(str(tstamp) + '\n')
+            tstamps_file.write(file_id +' '+str(tstamp) + '\n')
 
             # Find the closest depth timestamp
             if(args.depth_topic is not None):
@@ -133,11 +135,11 @@ def convert_bag_to_files(args):
             print("Writing image: {}.png. {}/{}".format(tstamp, imgs_count, args.max_imgs))
             #write depth
             if(args.depth_topic is not None):
-                cv2.imwrite(os.path.join(args.depth_folder, "{}.png".format(tstamp)), depth_img)
+                cv2.imwrite(os.path.join(args.depth_folder, "{}.png".format(file_id)), depth_img)
             if(args.save_as_video):
                 out.write(img)
             else:
-                cv2.imwrite(os.path.join(args.image_folder, "{}.png".format(tstamp)), img)
+                cv2.imwrite(os.path.join(args.image_folder, "{}.png".format(file_id)), img)
             imgs_count += 1
             if imgs_count >= args.max_imgs:
                 break
