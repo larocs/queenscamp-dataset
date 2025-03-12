@@ -116,3 +116,5 @@ If you use the dataset or tools in your research, please cite the following pape
       url={https://arxiv.org/abs/2410.12520}, 
 }
 ```
+## Other publications
+Check out our modular visual odometry framework, which is available [here](https://github.com/larocs/modvo).
