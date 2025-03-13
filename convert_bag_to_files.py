@@ -158,7 +158,7 @@ if __name__ == "__main__":
     args.add_argument("--image_topic", help="Image topic", default=None)
     args.add_argument("--depth_topic", help="Depth topic", default=None)
     args.add_argument("--pose_topic", help="Pose topic", default=None)
-    args.add_argument("--max_imgs", help="Maximum number of images to convert", default=800, type=int)
+    args.add_argument("--max_imgs", help="Maximum number of images to convert", default=8000, type=int)
     args.add_argument("--skip", help="N first images to skip", default=0, type=int)
     args.add_argument("--save_as_video", help="Save images as video", default=False, action='store_true')
     args.add_argument("--video_file", help="Output video file", default='output.avi')
