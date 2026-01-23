@@ -106,15 +106,16 @@ python evaluate.py <reference_file> <estimated_file> --output_path <path_to_save
 If you use the dataset or tools in your research, please cite the following paper:
 
 ```
-@misc{bruno2024queenscamprgbddatasetrobust,
-      title={QueensCAMP: an RGB-D dataset for robust Visual SLAM}, 
-      author={Hudson M. S. Bruno and Esther L. Colombini and Sidney N. Givigi Jr au2},
-      year={2024},
-      eprint={2410.12520},
-      archivePrefix={arXiv},
-      primaryClass={cs.CV},
-      url={https://arxiv.org/abs/2410.12520}, 
-}
+@INPROCEEDINGS{11338683,
+  author={Bruno, Hudson M. S. and Colombini, Esther L. and Givigi, Sidney N.},
+  booktitle={2025 IEEE International Conference on Advanced Robotics (ICAR)}, 
+  title={QueensCAMP: an RGB-D dataset for robust Visual SLAM}, 
+  year={2025},
+  volume={},
+  number={},
+  pages={798-803},
+  keywords={Degradation;Visualization;Simultaneous localization and mapping;Heuristic algorithms;Dynamics;Lighting;Cameras;Robustness;Lenses;Visual odometry},
+  doi={10.1109/ICAR65334.2025.11338683}}
 ```
 ## Other publications
 Check out our modular visual odometry framework, which is available [here](https://github.com/larocs/modvo).
