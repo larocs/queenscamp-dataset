@@ -15,53 +15,55 @@ Below there is a video illustrating various lens failures included in the datase
 
 There are 16 sequences, you can download the sequences with the failures or only the raw bags (without emulated failures):
 
-- 01: [Full Sequence (6.0 GB)](https://drive.usercontent.google.com/download?id=1nqa7ft5MKF0wcJd9GyHwLBtAL7D1OV47&export=download) |
-               [Bag (0.5 GB)](https://drive.usercontent.google.com/download?id=1xjIQjClK1niVoXDSxSNxQe76FkAcNAff&export=download)
+- 01: [Full Sequence (6.0 GB)](https://zenodo.org/records/13754512/files/01.zip?download=1) |
+               [Bag (0.5 GB)](https://zenodo.org/records/13754512/files/sequence1-dynamic.zip?download=1)
 
-- 02: [Full Sequence (8.1 GB)](https://drive.usercontent.google.com/download?id=1D1wiifPuNYeotUNdMXFZDKXJJ_X_aiuF&export=download) |
-               [Bag (0.7 GB)](https://drive.usercontent.google.com/download?id=15fQOuLZwFsG5um1BvkKsW7BzuF-Uz_bn&export=download)
+- 02: [Full Sequence (8.1 GB)](https://zenodo.org/records/13754512/files/02.zip?download=1) |
+               [Bag (0.7 GB)](https://zenodo.org/records/13754512/files/sequence2-static.zip?download=1)
 
-- 03: [Full Sequence (6.9 GB)](https://drive.usercontent.google.com/download?id=16zeLzSl9FB-43kvDg77Xiva5teQYdw3r&export=download) |
-                [Bag (0.6 GB)](https://drive.usercontent.google.com/download?id=1fmWsYXq9EW7YzyX1CuKLe_LLKXuKcL1p&export=download)
+- 03: [Full Sequence (6.9 GB)](https://zenodo.org/records/13754512/files/03.zip?download=1) |
+                [Bag (0.6 GB)](https://zenodo.org/records/13754512/files/sequence3-static.zip?download=1)
 
-- 04: [Full Sequence (6.9 GB)](https://drive.usercontent.google.com/download?id=1baHAq8XdyKSh1rX_6fpZ7zJKM29UW1wZ&export=download) |
-        [Bag (0.6 GB)](https://drive.usercontent.google.com/download?id=1jhRtQ_JpK9KXfJeLONSr0MGfzx0a1VLy&export=download)
+- 04: [Full Sequence (6.9 GB)](https://zenodo.org/records/13754512/files/04.zip?download=1) |
+        [Bag (0.6 GB)](https://zenodo.org/records/13754512/files/sequence4-dynamic.zip?download=1)
 
-- 05: [Full Sequence (9.2 GB)](https://drive.usercontent.google.com/download?id=1WmULSIyx9UtDKhr1H_0DOEazRkbOMIm3&export=download) |
-        [Bag (0.7 GB)](https://drive.usercontent.google.com/download?id=1PexbcMAuAYAPID1NDunT5uqExfiDSxhF&export=download)
+- 05: [Full Sequence (9.2 GB)](https://zenodo.org/records/13754512/files/05.zip?download=1) |
+        [Bag (0.7 GB)](https://zenodo.org/records/13754512/files/sequence5-dynamic.zip?download=1)
 
-- 06: [Full Sequence (9.0 GB)](https://drive.usercontent.google.com/download?id=1h_c-l19GEGLTc-gLBfEbZCbZOK-KFRDt&export=download) |
-        [Bag (0.7 GB)](https://drive.usercontent.google.com/download?id=1YSHISkkQpSvU5GGhAY6ZsPaD8WIbrv0x&export=download)
+- 06: [Full Sequence (9.0 GB)](https://zenodo.org/records/13754512/files/06.zip?download=1) |
+        [Bag (0.7 GB)](https://zenodo.org/records/13754512/files/sequence6-dynamic.zip?download=1)
 
-- 07: [Full Sequence (7.7 GB)](https://drive.usercontent.google.com/download?id=1GJM3pz_BnLuGTq4CytuYEAZqraqH_ck3&export=download) |
-        [Bag (0.6 GB)](https://drive.usercontent.google.com/download?id=1qXwq9cl_mcNPt2ANd8gg6Eqn6QjHwf9V&export=download)
+- 07: [Full Sequence (7.7 GB)](https://zenodo.org/records/13754512/files/07.zip?download=1) |
+        [Bag (0.6 GB)](https://zenodo.org/records/13754512/files/sequence7-dynamic.zip?download=1)
 
-- 08: [Full Sequence (5.2 GB)](https://drive.usercontent.google.com/download?id=1jKQo7DGmUXfP35yZ70NiBR6hqwSSa84e&export=download) |
-        [Bag (0.4 GB)](https://drive.usercontent.google.com/download?id=1qF4QE2gLNhoUIO-KlBznHpQIck-p9g97&export=download)
+- 08: [Full Sequence (5.2 GB)](https://zenodo.org/records/13754512/files/08.zip?download=1) |
+        [Bag (0.4 GB)](https://zenodo.org/records/13754512/files/sequence8-static.zip?download=1)
 
-- 09: [Full Sequence (4.2 GB)](https://drive.usercontent.google.com/download?id=1ja_qvTYSmGJPxoVAm89Ay2pIiDLXjvw4&export=download) |
-        [Bag (0.4 GB)](https://drive.usercontent.google.com/download?id=1RgAflLe3xeAsIP-RgxrkaKOP7L_zEANw&export=download)
+- 09: [Full Sequence (4.2 GB)](https://zenodo.org/records/13754512/files/09.zip?download=1) |
+        [Bag (0.4 GB)](https://zenodo.org/records/13754512/files/sequence9-static.zip?download=1)
 
-- 10: [Full Sequence (5.7 GB)](https://drive.usercontent.google.com/download?id=1RBpzd42HbjEOmdjLONgsXi3GgDy_AyUF&export=download) |
-        [Bag (0.5 GB)](https://drive.usercontent.google.com/download?id=1TSWsITjPNu-nBko9QufAy7LLEdaOTTtu&export=download)
+- 10: [Full Sequence (5.7 GB)](https://zenodo.org/records/13754512/files/10.zip?download=1) |
+        [Bag (0.5 GB)](https://zenodo.org/records/13754512/files/sequence10-static.zip?download=1)
 
-- 11: [Full Sequence (4.7 GB)](https://drive.usercontent.google.com/download?id=1XmyRndO7CKdTVmeuZfYUzd5okKbgVeZM&export=download) |
-        [Bag (0.4 GB)](https://drive.usercontent.google.com/download?id=1tOKUJKg8pC2e2RcZs5JQ_95SDt62Ps5j&export=download)
+- 11: [Full Sequence (4.7 GB)](https://zenodo.org/records/13754512/files/11.zip?download=1) |
+        [Bag (0.4 GB)](https://zenodo.org/records/13754512/files/sequence11-static.zip?download=1)
 
-- 12: [Full Sequence (4.6 GB)](https://drive.usercontent.google.com/download?id=13966F62XT715PDz5STvwla8EAftOyzKJ&export=download) |
-        [Bag (0.4 GB)](https://drive.usercontent.google.com/download?id=1reJzXP6iS9ij_LSm4sJ6MqVEtvRJHCdB&export=download)
+- 12: [Full Sequence (4.6 GB)](https://zenodo.org/records/13754512/files/12.zip?download=1) |
+        [Bag (0.4 GB)](https://zenodo.org/records/13754512/files/sequence12-static.zip?download=1)
 
-- 13: [Full Sequence (4.7 GB)](https://drive.usercontent.google.com/download?id=1MVWvxYA8ZWXM5yB0ZtEqjHl3AGdPwrKz&export=download) |
-        [Bag (0.4 GB)](https://drive.usercontent.google.com/download?id=13K2wL0HaefcJ6UMjC3W5YIOQGENhAEca&export=download)
+- 13: [Full Sequence (4.7 GB)](https://zenodo.org/records/13754512/files/13.zip?download=1) |
+        [Bag (0.4 GB)](https://zenodo.org/records/13754512/files/sequence13-static.zip?download=1)
 
-- 14: [Full Sequence (3.4 GB)](https://drive.usercontent.google.com/download?id=1EuQpPZC4vqVSyoHel3GADSzbrdPbZswv&export=download) |
-        [Bag (0.4 GB)](https://drive.usercontent.google.com/download?id=1lfcyFHUTmP4saGPSl5LaOgMF3zOYAocl&export=download)
+- 14: [Full Sequence (3.4 GB)](https://zenodo.org/records/13754512/files/14.zip?download=1) |
+        [Bag (0.4 GB)](https://zenodo.org/records/13754512/files/sequence14-static.zip?download=1)
 
-- 15: [Full Sequence (6.4 GB)](https://drive.usercontent.google.com/download?id=1FsjWzlUupiUxAfD6hBum70dqTznlTzQQ&export=download) |
-        [Bag (0.6 GB)](https://drive.usercontent.google.com/download?id=1K-0tqTxQlgvEluhMf_exRRYFQkKH5i8u&export=download)
+- 15: [Full Sequence (6.4 GB)](https://zenodo.org/records/13754512/files/15.zip?download=1) |
+        [Bag (0.6 GB)](https://zenodo.org/records/13754512/files/sequence15-static.zip?download=1)
 
-- 16: [Full Sequence (4.2 GB)](https://drive.usercontent.google.com/download?id=1MCcSApcisMupuyX0K09A8kjQl7aIG7M4&export=download) |
-        [Bag (0.4 GB)](https://drive.usercontent.google.com/download?id=1kUfufHLgd9Q9Z3Eb1gAdgDXD3rPxdA6P&export=download)
+- 16: [Full Sequence (4.2 GB)](https://zenodo.org/records/13754512/files/16.zip?download=1) |
+        [Bag (0.4 GB)](https://zenodo.org/records/13754512/files/sequence16-static.zip?download=1)
+
+You can also download the dataset from [Zenodo](https://zenodo.org/records/13754512).
 
 ### 2. Rosbags Post-Processing
 If you plan to download the rosbags, you can use the post-processing script to convert the rosbags to images and depth maps. The script will also generate the ground truth poses for each frame. Feel free to modify the script to suit your needs.
